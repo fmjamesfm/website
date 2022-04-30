@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Layout from './Pages/Layout';
+import Layout from './Layout';
 import Home from './Pages/Home';
 import NoPage from './Pages/NoPage';
-import ReservoirApp from './Pages/ResevoirApp';
 
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 
 export default function App() {
   return (
@@ -17,13 +15,21 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="reservoir" element={<ReservoirApp />} />
           <Route path="*" element={<NoPage />} />
+          <Route
+              path="/wrodle"
+              element={ <div>Redirecting...</div>}
+              />
+          <Route
+              path="/reservoir"
+              element={ <div>Redirecting...</div> }
+              />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
