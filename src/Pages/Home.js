@@ -20,13 +20,14 @@ return (
 function Home() {
     return (
         <div className='home-page'>
-
-                    <h1>Apps</h1>
+                    <h1></h1>
 
                     <div className='app-link-container'>
 
                     <AppLink href={'/reservoir'} title={"rescal"} subtitle={"Organ reservoir resonance calculator"}/>
+                    <AppLink href={'/gridgame'} title={"Grid Game"} subtitle={"Game of grids"}/>
                     <AppLink href={'/wrodle'} title={"Wrodle"} subtitle={"Bad Wordle clone"}/>
+                    
                     
                     </div>
         </div>

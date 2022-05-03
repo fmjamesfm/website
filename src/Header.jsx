@@ -7,18 +7,10 @@ export default function Header(){
       <div className='navbar'>
         <a href="/" 
             className="navbar-logo">
-          <img
-            alt=""
-            src={logo}
-          />{' '}
+              JFM
         </a>
     
-        {/*
-      <nav className="navbar-menu">
-        <a href="/reservoir">ResCal</a>
-         <a href="/wrodle">Wrodle</a>
-      </nav>
-    */}
+        
 
       </div>
     

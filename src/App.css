@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Orelega+One&family=Pacifico&family=Poppins:wght@300;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap');
 body {
   height: 100%;
+
 }
 
-#root, html, .app {
+#root, html, body, .app {
 height: 100%;
-color: white;
+color: black;
 font-family: 'Roboto', sans-serif;
 font-weight: bold;
-
 }
+
+
 h1 {
   font-family: 'Oleo script', cursive;
   font-size: 46px;
@@ -23,7 +24,18 @@ h1 {
 }
 
 body {
-  background-color: black;
+  background-color: white;
+}
+
+.app-header {
+display: flex;
+flex-direction: row;
+font-size: 28px;
+font-family: 'Pacifico', cursive;
+text-align: center;
+justify-content: center;
+align-items: center;
+border-bottom: 1px solid silver;
 }
 
 .app-main-body {
@@ -38,6 +50,12 @@ body {
   height: calc(100% - var(--header-height));
   justify-content: center;
   
+}
+
+.home-page h1 {
+
+ max-width: 350px;
+
 }
 
 .app-link-container {
@@ -60,19 +78,40 @@ padding: 10px;
     flex: 1;
     height:100%;
     width: 100%;
-    background-color: #111111;
-    padding: 10px;
+    background-color: #222222;
+    gap:10px;
+    padding-inline: 10px;
     text-align: center;
     font-size: 20px;
+    font-weight:300;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
-.home-app-link:hover{
 
-  background-color: green;
+.home-app-link:hover{
+  transform: scale(1.1);
+  animation: expand 0.2s;
+}
+
+.home-app-link:active{
+  background-color:#999999;
+  color: black;
+  animation: shrink 0.3s;
+}
+
+
+@keyframes expand {
+  0% {transform: scale(1.0);}
+  100% {transform: scale(1.1);;}
+}
+
+@keyframes shrink {
+  0% {transform: scale(1.0);}
+  50% {transform: scale(0.9);;}
+  100% {transform: scale(1.1);;}
+  
 }
 
 .app-link-title{
@@ -83,11 +122,12 @@ padding: 10px;
 .app-header {
   height: var(--header-height);
 }
+
 .navbar {
   height:  var(--header-height);
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   border-bottom: 1px solid white;
   padding: 10px 0;
@@ -99,13 +139,11 @@ padding: 10px;
   justify-content: space-evenly;
   gap: 20px;
   font-size: 20px;
-
 }
 
 
 .navbar-logo {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,0);
-  
+    text-decoration: none;
+  color:black;
+  font-size: 46px;
 }
