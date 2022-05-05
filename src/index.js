@@ -24,7 +24,12 @@ export default function App() {
               path="/reservoir"
               element={ <div>Redirecting...</div> }
               />
+          <Route
+              path="/gridgame"
+              element={ <div>Redirecting...</div> }
+              />
         </Route>
+        
       </Routes>
     </BrowserRouter>
   );
